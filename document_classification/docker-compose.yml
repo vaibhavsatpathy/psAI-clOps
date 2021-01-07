@@ -1,0 +1,14 @@
+version: "3"
+services:
+  web:
+    image: 142339138776.dkr.ecr.us-east-2.amazonaws.com/docuedge-model-zoo:latest
+    ports:
+      - "5000:5000"
+    logging:
+      driver: awslogs
+      options:
+        awslogs-group: docuedge-modelserver-ecs
+        awslogs-region: us-east-2
+        awslogs-stream-prefix: web
+    volumes:
+      - /app/temp

@@ -1,0 +1,21 @@
+version: 1
+task_definition:
+  task_execution_role: ecsTaskExecutionRoleBento
+  ecs_network_mode: awsvpc
+  task_size:
+    mem_limit: 8GB
+    cpu_limit: 4096
+  efs_volumes:
+    - name: docuedgedev-efs
+      filesystem_id: fs-4717c93f
+      root_directory: /smartbox-config
+run_params:
+  network_configuration:
+    awsvpc_configuration:
+      subnets:
+        - subnet-00e7bff093931a167
+        - subnet-0345b051535c9625d
+      security_groups:
+        - sg-09b7e06cb8b13167d
+        - sg-0601a52d4ea28af05
+      assign_public_ip: ENABLED
