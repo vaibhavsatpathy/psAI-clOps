@@ -87,7 +87,7 @@ parser.add_argument("-mp", "--model_path", default="NULL", help="Path to trained
 parser.add_argument(
     "-exp",
     "--experiment_name",
-    default="test_experiment",
+    default="multi_label_classification",
     help="Name of the experiment for tracking",
 )
 args = parser.parse_args()

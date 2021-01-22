@@ -15,7 +15,9 @@ from tensorflow.keras.layers import (
     Flatten,
 )
 
-tracking_uri = "http://testuser:test@ec2-18-220-228-243.us-east-2.compute.amazonaws.com"
+tracking_uri = (
+    "http://testuser:password@ec2-18-218-100-222.us-east-2.compute.amazonaws.com"
+)
 s3_bucket = "s3://docuedge-mlflow-bucket"  # replace this value
 
 
@@ -165,7 +167,7 @@ parser.add_argument("-mp", "--model_path", default="NULL", help="Path to trained
 parser.add_argument(
     "-exp",
     "--experiment_name",
-    default="test_experiment",
+    default="intel_classification",
     help="Name of the experiment for tracking",
 )
 args = parser.parse_args()

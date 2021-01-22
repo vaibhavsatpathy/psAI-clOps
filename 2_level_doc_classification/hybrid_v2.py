@@ -20,7 +20,9 @@ import json
 import mlflow
 import mlflow.tensorflow
 
-tracking_uri = "http://testuser:test@ec2-18-220-228-243.us-east-2.compute.amazonaws.com"
+tracking_uri = (
+    "http://testuser:password@ec2-18-218-100-222.us-east-2.compute.amazonaws.com"
+)
 s3_bucket = "s3://docuedge-mlflow-bucket"  # replace this value
 
 
